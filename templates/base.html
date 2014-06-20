@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang='es'>
+	<head>
+		<meta charset='utf-8'>
+		<title>{% block titulo %}{% endblock %}</title>
+		{% block hojas_de_estilos %}{% endblock %}
+	</head>
+	<body>
+		<div id='principal'>la plantilla esta herendando de la plantilla base.html</div>
+		{% block contenido %}{% endblock %}
+	</body>
+	<script type="text/javascript" src="{{STATIC_URL}}js/jQueryMin2.js" ></script>
+	<script type="text/javascript" src="{{STATIC_URL}}js/palabrasFrases/main.js" ></script>
+	{% block javascripts %}{% endblock %}
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block hojas_de_estilos %}
+	<link href="{{STATIC_URL}}css/palabrasFrases/estilo.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block contenido %}
+    </hr>
+    <h1>ESTUDIANTES PUBLICO</h1>
+	{% for estudiante in EstudiantesPublico %}
+		<p>id = {{ estudiante.id }}  nombre= {{ estudiante.nombre}}   apellido = {{ estudiante.apellido }}</p>
+	{% endfor %}
+
+    <hr/>
+    <h1>ESTUDIANTES COLEGIO</h1>
+	{% for estudiante in EstudiantesColegio %}
+		<p>id = {{ estudiante.id }}  nombre= {{ estudiante.nombre}}   apellido = {{ estudiante.apellido }}</p>
+	{% endfor %}
+
+    <hr/>
+
+	{% for secretaria in Secretarias %}
+		<p>id = {{ secretaria.id }}  nombre= {{ secretaria.nombre}}   apellido = {{ secretaria.apellido }}</p>
+	{% endfor %}
+{% endblock %}
